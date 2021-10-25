@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce HTML</title>
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+             background: linear-gradient(to top right, #2A75B4,#692AB4,#fff);
+             overflow: hidden;
+             position: relative;
+             background-size: 200% 200%;
+             animation: gradient 8s infinite;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+         }
+        .ball1, .ball2, .ball3, .ball4{
+            width: 50px;
+            height: 50px;
+            background: rgb(254, 254, 255);
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            animation: mantul 3s infinite;
+        }
+        .ball1{
+            animation: mantul 1s infinite;
+        }
+        .ball2{
+            animation: mantul 1.1s infinite;
+        }
+        .ball3{
+            animation: mantul 1.2s infinite;
+        }
+        .ball4{
+            animation: mantul 1.3s infinite;
+        }
+        @keyframes mantul {
+            0%, 100%{
+                transform: translateY(20px);
+            }
+            50%{
+                transform: translateY(-20px);
+              }
+        }
+
+        @keyframes gradient {
+            0%, 100%{
+                background-position: 100%;
+            }
+            50%{
+                background-position: 50%;
+            }
+            75%{
+                background-position: 75%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball1"></div>
+        <div class="ball2"></div>
+        <div class="ball3"></div>
+        <div class="ball4"></div>
+    </div>
+ </body>
+</html>
